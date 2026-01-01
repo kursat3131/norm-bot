@@ -1,0 +1,902 @@
+{
+  "players": {
+    "kursat3132": {
+      "firstSeen": 1764681167196,
+      "lastSeen": 1764959464678,
+      "interactions": 186,
+      "friendship": 0,
+      "notes": []
+    },
+    "Site": {
+      "firstSeen": 1764958141238,
+      "lastSeen": 1764958141238,
+      "interactions": 1,
+      "friendship": 0,
+      "notes": []
+    },
+    "Discord": {
+      "firstSeen": 1764958141319,
+      "lastSeen": 1764958141319,
+      "interactions": 1,
+      "friendship": 0,
+      "notes": []
+    },
+    "Whatsapp": {
+      "firstSeen": 1764958141353,
+      "lastSeen": 1764958141353,
+      "interactions": 1,
+      "friendship": 0,
+      "notes": []
+    }
+  },
+  "locations": {
+    "maden": {
+      "position": {
+        "x": -5.356255849571313,
+        "y": -60,
+        "z": 13.5
+      },
+      "description": "maden konumu",
+      "savedAt": 1764681905816
+    }
+  },
+  "items": {},
+  "events": [
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "attı lan",
+      "timestamp": 1764685121940
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_bey 2 tane köylüye ok at",
+      "timestamp": 1764685127542
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_bey 2 köylüyü öldürene kadar ok at",
+      "timestamp": 1764685140117
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_bey 2 kez ok at",
+      "timestamp": 1764685147513
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_bey taş kaz",
+      "timestamp": 1764685157315
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_bey 10 adet kaş kaz ama çok hızlı",
+      "timestamp": 1764685176437
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_bey topla",
+      "timestamp": 1764685184139
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_bey bidaha topla",
+      "timestamp": 1764685196689
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_bey taşları topla",
+      "timestamp": 1764685202432
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_bey bana ok at",
+      "timestamp": 1764685211982
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_bey kursat3132 ok at",
+      "timestamp": 1764685217439
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_bey envanterdeki herşeyi at",
+      "timestamp": 1764685291663
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_bey kendine ev yap",
+      "timestamp": 1764685317234
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "selam kursat_bey",
+      "timestamp": 1764685369536
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "sa",
+      "timestamp": 1764871409771
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "çalıştı lan",
+      "timestamp": 1764871416914
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "selam kursat_Bey",
+      "timestamp": 1764871421326
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Teleported kursat_Bey to kursat3132]",
+      "timestamp": 1764871434316
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "1 tane köylüye ok at",
+      "timestamp": 1764871456037
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_Bey 1 tane köylüye ok at",
+      "timestamp": 1764871464740
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "oha",
+      "timestamp": 1764871467230
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "vay amkı",
+      "timestamp": 1764871470891
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "adam harbi ok atıo amk",
+      "timestamp": 1764871516113
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_Bey köylüye ok at",
+      "timestamp": 1764871554668
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Teleported kursat_Bey to kursat3132]",
+      "timestamp": 1764871564272
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_Bey envanterdeki herşeyini at",
+      "timestamp": 1764871574721
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "bak bu sorun",
+      "timestamp": 1764871581212
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_Bey 1 elmas kır kazma ile",
+      "timestamp": 1764871591107
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Removed 65 item(s) from player kursat_Bey]",
+      "timestamp": 1764871600373
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Set kursat_Bey's game mode to Survival Mode]",
+      "timestamp": 1764871610433
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Teleported kursat_Bey to kursat3132]",
+      "timestamp": 1764871646048
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "köylüye ok at",
+      "timestamp": 1764871663118
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_Bey köylüye ok at",
+      "timestamp": 1764871669172
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Teleported kursat_Bey to kursat3132]",
+      "timestamp": 1764871732901
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_Bey 10 taş kaz ve kursat3132 ye getir",
+      "timestamp": 1764871748794
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "netherite_pickaxe kullan",
+      "timestamp": 1764871759749
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "netherite_pickaxe kullan kursat_Bey",
+      "timestamp": 1764871765670
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Removed 2 item(s) from player kursat_Bey]",
+      "timestamp": 1764871773144
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_Bey şmidi kursat3132 re getir",
+      "timestamp": 1764871803800
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_Bey şimdi taştan 3x3 zemin yap",
+      "timestamp": 1764871827165
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "tahta kazma yap",
+      "timestamp": 1764871838622
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "tahta kazma yap kursat_Bey",
+      "timestamp": 1764871844717
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "bu yüzden ai den daha çok bot geliştircme ama ai iel birlikte kk condrawer",
+      "timestamp": 1764871872809
+    },
+    {
+      "type": "chat",
+      "username": "Site",
+      "message": "Ulaşmak için tıkla!",
+      "timestamp": 1764958141244
+    },
+    {
+      "type": "chat",
+      "username": "Discord",
+      "message": "Katılmak için tıkla!",
+      "timestamp": 1764958141323
+    },
+    {
+      "type": "chat",
+      "username": "Whatsapp",
+      "message": "Katılmak için tıkla!",
+      "timestamp": 1764958141355
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Teleported kursat_Bey to kursat3132]",
+      "timestamp": 1764958761737
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_Bey geliş",
+      "timestamp": 1764958795636
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "!follow me",
+      "timestamp": 1764958802156
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "!follow kursat3132",
+      "timestamp": 1764958807186
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "!collect grass_block 1",
+      "timestamp": 1764958818525
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Set own game mode to Survival Mode]",
+      "timestamp": 1764958853084
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Set own game mode to Creative Mode]",
+      "timestamp": 1764958855667
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Set own game mode to Survival Mode]",
+      "timestamp": 1764958862909
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Set own game mode to Creative Mode]",
+      "timestamp": 1764958892623
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Set own game mode to Survival Mode]",
+      "timestamp": 1764958991284
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Set own game mode to Creative Mode]",
+      "timestamp": 1764959068504
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_Bey yanıma gel",
+      "timestamp": 1764959077209
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_Bey kursat3132 re saldır",
+      "timestamp": 1764959086820
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Set own game mode to Survival Mode]",
+      "timestamp": 1764959091003
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "kursat_Bey kursat3132 re saldır",
+      "timestamp": 1764959093735
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Set own game mode to Creative Mode]",
+      "timestamp": 1764959098249
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 1 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959112793
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 1 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959113360
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 1 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959113717
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 1 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959113931
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 1 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959114196
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 1 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959114421
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 1 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959114727
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 1 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959114937
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 1 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959115202
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 1 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959115444
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 1 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959118398
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 1 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959118757
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 1 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959119063
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 1 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959119345
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 1 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959119680
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 1 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959120026
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 10 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959123832
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 10 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959125260
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 10 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959125628
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 10 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959126220
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 10 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959126765
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 10 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959127092
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 10 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959127381
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 10 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959127772
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Gave 10 [Totem of Undying] to kursat3132]",
+      "timestamp": 1764959128039
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Set own game mode to Survival Mode]",
+      "timestamp": 1764959166725
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Set own game mode to Creative Mode]",
+      "timestamp": 1764959211786
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Set own game mode to Survival Mode]",
+      "timestamp": 1764959237830
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Set own game mode to Creative Mode]",
+      "timestamp": 1764959244328
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Set own game mode to Survival Mode]",
+      "timestamp": 1764959270546
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Set own game mode to Creative Mode]",
+      "timestamp": 1764959328199
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Set own game mode to Survival Mode]",
+      "timestamp": 1764959363799
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Set own game mode to Creative Mode]",
+      "timestamp": 1764959366111
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Set own game mode to Survival Mode]",
+      "timestamp": 1764959404258
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Set own game mode to Creative Mode]",
+      "timestamp": 1764959434152
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Set own game mode to Survival Mode]",
+      "timestamp": 1764959442521
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Set own game mode to Creative Mode]",
+      "timestamp": 1764959442706
+    },
+    {
+      "type": "chat",
+      "username": "kursat3132",
+      "message": "Set own game mode to Survival Mode]",
+      "timestamp": 1764959464681
+    }
+  ],
+  "conversations": {
+    "kursat3132": [
+      {
+        "message": "kursat_bey yanıma gel",
+        "response": "Geliyorum!",
+        "timestamp": 1764682491292
+      },
+      {
+        "message": "kursat_bey yanıma gel",
+        "response": "Geliyorum!",
+        "timestamp": 1764682498952
+      },
+      {
+        "message": "Teleported kursat_bey to kursat3132]",
+        "response": "Geliyorum!",
+        "timestamp": 1764685014841
+      },
+      {
+        "message": "kursat_bey yanıma gelmeme gerek yok",
+        "response": "Tamam, artık seni takip etmeyeceğim!",
+        "timestamp": 1764685023093
+      },
+      {
+        "message": "kursat_bey combat biliyomusun",
+        "response": "Evet, savaş komutlarını biliyorum. Hangi komut hakkında bilgi almak istiyorsun?",
+        "timestamp": 1764685034415
+      },
+      {
+        "message": "kursat_bey ok atmayı biliyormsuun",
+        "response": "Ok atabiliyorum, hedefi belirle!",
+        "timestamp": 1764685041389
+      },
+      {
+        "message": "kursat_bey varmı şmidi",
+        "response": "Etrafıma bakıyorum...",
+        "timestamp": 1764685059519
+      },
+      {
+        "message": "kursat_bey envanterine bak",
+        "response": "Bakıyorum...",
+        "timestamp": 1764685067752
+      },
+      {
+        "message": "kursat_bey envanterde bow yani yay arrow yani ok var",
+        "response": "Bakıyorum...",
+        "timestamp": 1764685083270
+      },
+      {
+        "message": "kursat_bey envanteri gösterme",
+        "response": "Bakıyorum...",
+        "timestamp": 1764685089575
+      },
+      {
+        "message": "kursat_bey ya",
+        "response": "Bakıyorum...",
+        "timestamp": 1764685094024
+      },
+      {
+        "message": "kursat_bey bana bak",
+        "response": "Bakıyorum!",
+        "timestamp": 1764685098950
+      },
+      {
+        "message": "kursat_bey eline yayı al",
+        "response": "Yayı elime aldım!",
+        "timestamp": 1764685105462
+      },
+      {
+        "message": "kursat_bey tavuğa ok at",
+        "response": "Ok atıyorum!",
+        "timestamp": 1764685116520
+      },
+      {
+        "message": "kursat_bey 2 tane köylüye ok at",
+        "response": "Ok atıyorum!",
+        "timestamp": 1764685129259
+      },
+      {
+        "message": "kursat_bey 2 köylüyü öldürene kadar ok at",
+        "response": "Ok atıyorum!",
+        "timestamp": 1764685141724
+      },
+      {
+        "message": "kursat_bey 2 kez ok at",
+        "response": "Ok atıyorum!",
+        "timestamp": 1764685148977
+      },
+      {
+        "message": "kursat_bey taş kaz",
+        "response": "Taş kazıyorum!",
+        "timestamp": 1764685161464
+      },
+      {
+        "message": "kursat_bey 10 adet kaş kaz ama çok hızlı",
+        "response": "Hızlıca kazıyorum!",
+        "timestamp": 1764685180162
+      },
+      {
+        "message": "kursat_bey topla",
+        "response": "Topluyorum!",
+        "timestamp": 1764685189398
+      },
+      {
+        "message": "kursat_bey bidaha topla",
+        "response": "Topluyorum!",
+        "timestamp": 1764685197201
+      },
+      {
+        "message": "kursat_bey taşları topla",
+        "response": "Taşları topluyorum!",
+        "timestamp": 1764685202901
+      },
+      {
+        "message": "kursat_bey bana ok at",
+        "response": "Ok atıyorum!",
+        "timestamp": 1764685212554
+      },
+      {
+        "message": "kursat_bey kursat3132 ok at",
+        "response": "Ok atıyorum!",
+        "timestamp": 1764685217870
+      },
+      {
+        "message": "kursat_bey envanterdeki herşeyi at",
+        "response": "Envanterdeki her şeyi atıyorum!",
+        "timestamp": 1764685292262
+      },
+      {
+        "message": "kursat_bey kendine ev yap",
+        "response": "Şu an konuşamıyorum!",
+        "timestamp": 1764685317583
+      },
+      {
+        "message": "selam kursat_bey",
+        "response": "Şu an konuşamıyorum!",
+        "timestamp": 1764685370270
+      },
+      {
+        "message": "selam kursat_Bey",
+        "response": "Merhaba!",
+        "timestamp": 1764871422082
+      },
+      {
+        "message": "Teleported kursat_Bey to kursat3132]",
+        "response": "Teleport edildi!",
+        "timestamp": 1764871434868
+      },
+      {
+        "message": "kursat_Bey 1 tane köylüye ok at",
+        "response": "Ok atıyorum!",
+        "timestamp": 1764871466369
+      },
+      {
+        "message": "kursat_Bey köylüye ok at",
+        "response": "Ok atıyorum!",
+        "timestamp": 1764871556520
+      },
+      {
+        "message": "Teleported kursat_Bey to kursat3132]",
+        "response": "Teleport edildi!",
+        "timestamp": 1764871564750
+      },
+      {
+        "message": "kursat_Bey envanterdeki herşeyini at",
+        "response": "Envanterimden her şeyi atıyorum!",
+        "timestamp": 1764871575540
+      },
+      {
+        "message": "kursat_Bey 1 elmas kır kazma ile",
+        "response": "Elmas kırıyorum!",
+        "timestamp": 1764871591945
+      },
+      {
+        "message": "Removed 65 item(s) from player kursat_Bey]",
+        "response": "Envanterimden 65 madde kaldırıldı!",
+        "timestamp": 1764871601113
+      },
+      {
+        "message": "Set kursat_Bey's game mode to Survival Mode]",
+        "response": "Anlamadım!",
+        "timestamp": 1764871610870
+      },
+      {
+        "message": "Teleported kursat_Bey to kursat3132]",
+        "response": "Geliyorum!",
+        "timestamp": 1764871646639
+      },
+      {
+        "message": "kursat_Bey köylüye ok at",
+        "response": "Ok atıyorum!",
+        "timestamp": 1764871671132
+      },
+      {
+        "message": "Teleported kursat_Bey to kursat3132]",
+        "response": "Geliyorum!",
+        "timestamp": 1764871733586
+      },
+      {
+        "message": "netherite_pickaxe kullan kursat_Bey",
+        "response": "Netherite pickaxe kullanıyorum!",
+        "timestamp": 1764871766130
+      },
+      {
+        "message": "Removed 2 item(s) from player kursat_Bey]",
+        "response": "İtemler alındı!",
+        "timestamp": 1764871773592
+      },
+      {
+        "message": "kursat_Bey 10 taş kaz ve kursat3132 ye getir",
+        "response": "Taşları kazıyorum ve getiriyorum!",
+        "timestamp": 1764871791819
+      },
+      {
+        "message": "kursat_Bey şmidi kursat3132 re getir",
+        "response": "Taşları kazıyorum ve getiriyorum!",
+        "timestamp": 1764871812167
+      },
+      {
+        "message": "kursat_Bey şimdi taştan 3x3 zemin yap",
+        "response": "Zemin yapılıyor!",
+        "timestamp": 1764871827909
+      },
+      {
+        "message": "tahta kazma yap kursat_Bey",
+        "response": "Tahta kazma yapıyorum!",
+        "timestamp": 1764871845530
+      },
+      {
+        "message": "Teleported kursat_Bey to kursat3132]",
+        "response": "Teleport edildi!",
+        "timestamp": 1764958763255
+      },
+      {
+        "message": "kursat_Bey geliş",
+        "response": "Geliyorum!",
+        "timestamp": 1764958796434
+      },
+      {
+        "message": "kursat_Bey yanıma gel",
+        "response": "Geliyorum!",
+        "timestamp": 1764959080158
+      },
+      {
+        "message": "kursat_Bey kursat3132 re saldır",
+        "response": "Saldırıyorum!",
+        "timestamp": 1764959088927
+      },
+      {
+        "message": "kursat_Bey kursat3132 re saldır",
+        "response": "Saldırıyorum!",
+        "timestamp": 1764959094850
+      }
+    ]
+  },
+  "tasks": [],
+  "knowledge": {}
+}

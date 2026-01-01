@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Bot Panel</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    
+    <div class="container">
+        <h1>📊 Dashboard</h1>
+        
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">🎮</div>
+                <h3>Minecraft Bot</h3>
+                <p>Minecraft sunucunu yönet</p>
+                <a href="/minecraft" class="btn">Yönet</a>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">📦</div>
+                <h3>Envanter</h3>
+                <p>Bot envanterini gör</p>
+                <a href="/inventory" class="btn">Aç</a>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">💬</div>
+                <h3>Discord Bot</h3>
+                <p>Discord botunu yönet</p>
+                <a href="/discord" class="btn">Yönet</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

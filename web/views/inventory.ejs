@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envanter - Minecraft Bot</title>
+    <link rel="stylesheet" href="/css/inventory.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    
+    <div class="container">
+        <h1>📦 Bot Envanteri</h1>
+        
+        <div class="inventory-container">
+            <div class="inventory-title">Inventory</div>
+            
+            <!-- Ana Envanter (27 slot - 3 satır x 9 sütun) -->
+            <div class="inventory-grid main-inventory">
+                <% for(let i = 0; i < 27; i++) { %>
+                    <div class="inventory-slot" data-slot="<%= i %>">
+                        <div class="slot-content"></div>
+                        <div class="slot-count"></div>
+                    </div>
+                <% } %>
+            </div>
+            
+            <!-- Hotbar (9 slot) -->
+            <div class="inventory-grid hotbar">
+                <% for(let i = 0; i < 9; i++) { %>
+                    <div class="inventory-slot hotbar-slot" data-slot="<%= 27 + i %>">
+                        <div class="slot-content"></div>
+                        <div class="slot-count"></div>
+                        <div class="slot-number"><%= i + 1 %></div>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+        
+        <div class="inventory-actions">
+            <button onclick="refreshInventory()" class="btn">🔄 Yenile</button>
+            <button onclick="dropSelected()" class="btn">🗑️ Seçili Eşyayı At</button>
+        </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/inventory.js"></script>
+</body>
+</html>
