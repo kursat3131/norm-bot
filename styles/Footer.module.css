@@ -1,0 +1,30 @@
+/* Footer Styles - Alt bilgi çubuğu stilleri */
+.footer {
+  background: #333;
+  color: white;
+  padding: 2rem 0;
+  margin-top: auto;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+.links a {
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: white;
+}
