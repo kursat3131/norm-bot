@@ -158,10 +158,4 @@ io.on('connection', (socket) => {
   });
 });
 
-export function startWebServer(port = 3000) {
-  httpServer.listen(port, () => {
-    console.log(`🌐 Web panel başlatıldı: http://localhost:${port}`);
-    console.log(`👤 Kullanıcı: admin`);
-    console.log(`🔑 Şifre: admin123`);
-  });
-}
+export default app;

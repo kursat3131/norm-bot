@@ -438,6 +438,3 @@ async function createGeneralTemplate(guild) {
 }
 
 client.login(config.token);
-
-// Web paneli başlat
-startWebServer(3000);

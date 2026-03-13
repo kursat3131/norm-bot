@@ -2,10 +2,10 @@
   "name": "discord-ai-bot",
   "version": "1.0.0",
   "description": "Discord bot with Groq AI integration",
-  "main": "index.js",
+  "main": "web/server.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "start": "node web/server.js",
     "dev": "node --watch index.js",
     "deploy": "node deploy-commands.js"
   },
