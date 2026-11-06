@@ -1,100 +1,161 @@
-# Discord AI Bot
+<div align="center">
 
-Groq AI entegrasyonlu Discord moderasyon botu.
+# 🤖 Norm Bot
 
-## Özellikler
+### Çok Amaçlı Discord Botu
 
-- 🤖 Groq AI ile akıllı sohbet
-- 🔇 Mute/Unmute sistemi
-- 👢 Kick/Ban komutları
-- 📝 Kanal oluşturma
-- 🧹 Mesaj temizleme
-- 📊 Sunucu bilgileri
+*Groq AI destekli, ekonomi sistemi ve Minecraft entegrasyonuyla dolu özelliklere sahip Discord botu*
 
-## Kurulum
+[![Discord.js](https://img.shields.io/badge/discord.js-v14-blue.svg)](https://discord.js.org/)
+[![Node.js](https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg)](https://nodejs.org/)
+[![License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE)
 
-1. Gerekli paketleri yükleyin:
+[Özellikler](#özellikler) • [Kurulum](#kurulum) • [Kullanım](#kullanım) • [Komutlar](#komutlar)
+
+</div>
+
+---
+
+## ✨ Özellikler
+
+### 🧠 Yapay Zeka
+Groq AI entegrasyonu ile doğal dil işleme ve akıllı sohbet
+
+### 💰 Ekonomi Sistemi
+Günlük ödüller, hayvan yakalama, slot makinesi, rulet ve daha fazlası
+
+### 🎮 Minecraft Entegrasyonu
+Discord üzerinden Minecraft botunu kontrol edin ve yönetin
+
+### 🛡️ Moderasyon Araçları
+Mute, kick, ban, mesaj silme ve kanal yönetimi
+
+### 🖥️ Electron GUI
+Modern arayüzle bot yönetimi, istatistikler ve canlı log görüntüleme
+
+---
+
+## 📦 Kurulum
+
+### Gereksinimler
+- Node.js 18 veya üzeri
+- npm veya yarn
+- Discord Bot Token
+- Groq API Key
+
+### Adımlar
+
+**1. Depoyu klonlayın**
+```bash
+git clone https://github.com/kursat3131/norm-bot.git
+cd norm-bot
+```
+
+**2. Bağımlılıkları yükleyin**
 ```bash
 npm install
 ```
 
-2. `.env.example` dosyasını `.env` olarak kopyalayın ve bilgilerinizi girin:
+**3. Ortam değişkenlerini ayarlayın**
 ```bash
-DISCORD_TOKEN=your_discord_bot_token
-GROQ_API_KEY=your_groq_api_key
-CLIENT_ID=your_client_id
+# .env.example dosyasını .env olarak kopyalayın
+cp .env.example .env
 ```
 
-3. Botu başlatın:
-```bash
-npm start
+`.env` dosyasını düzenleyin:
+```env
+DISCORD_TOKEN=your_bot_token_here
+CLIENT_ID=your_client_id_here
+PREFIX=!
+GROQ_API_KEY=your_groq_api_key_here
+AI_MODEL=llama-3.3-70b-versatile
+PORT=3000
 ```
 
-4. Slash komutları kaydet (ilk kurulumda):
+**4. Slash komutlarını kaydedin**
 ```bash
 npm run deploy
 ```
 
-## Discord Bot Oluşturma
+**5. Botu başlatın**
+```bash
+npm start
+```
 
-1. [Discord Developer Portal](https://discord.com/developers/applications) adresine gidin
-2. "New Application" butonuna tıklayın
-3. Bot sekmesinden "Add Bot" butonuna tıklayın
-4. Token'ı kopyalayın ve `.env` dosyasına ekleyin
-5. Bot için gerekli izinleri verin:
-   - Administrator (veya özel izinler)
-6. OAuth2 > URL Generator'dan bot davet linkini oluşturun
-   - Scopes: `bot` ve `applications.commands` seçin
-7. Client ID'yi kopyalayın ve `.env` dosyasına ekleyin
+---
 
-## Groq API Key Alma
+## 🔑 API Anahtarları Nasıl Alınır?
 
-1. [Groq Console](https://console.groq.com) adresine gidin
-2. Hesap oluşturun veya giriş yapın
-3. API Keys bölümünden yeni bir key oluşturun
+### Discord Bot Token
+
+1. [Discord Developer Portal](https://discord.com/developers/applications)'a gidin
+2. "New Application" butonuna tıklayın ve bot ismi verin
+3. Sol menüden "Bot" sekmesine gidin
+4. "Add Bot" butonuna tıklayın
+5. "Reset Token" ile token'ı görüntüleyin ve kopyalayın
+6. Bot izinleri: `Administrator` veya gerekli izinler
+7. "Privileged Gateway Intents" bölümünden şunları aktif edin:
+   - Presence Intent
+   - Server Members Intent
+   - Message Content Intent
+8. OAuth2 > URL Generator'dan davet linki:
+   - Scopes: `bot` + `applications.commands`
+   - Permissions: `Administrator`
+
+### Groq API Key
+
+1. [Groq Console](https://console.groq.com)'a gidin
+2. Ücretsiz hesap oluşturun
+3. API Keys bölümünden yeni key oluşturun
 4. Key'i kopyalayın ve `.env` dosyasına ekleyin
 
-## 🌐 Web Panel
+---
 
-Bot başlatıldığında otomatik olarak web panel açılır:
-- **URL:** http://localhost:3000
-- **Kullanıcı:** admin
-- **Şifre:** admin123
+## 🖥️ GUI Kullanımı
 
-### Panel Özellikleri:
-- 🎮 Minecraft bot yönetimi
-- 💬 Discord bot yönetimi
-- 📊 Canlı istatistikler
-- 💬 Minecraft chat entegrasyonu
+Botu grafiksel arayüzden yönetmek için:
 
-## 🎮 Minecraft Bot
+```bash
+npm run gui
+```
 
-### Discord Komutları:
-- `!mc-bağla [ip] [port] [kullanıcı]` - Minecraft sunucusuna bağlan
-- `!mc-durum` - Bot durumunu göster
-- `!mc-mesaj [mesaj]` - Minecraft'a mesaj gönder
-- `!mc-collect [blok] [sayı]` - Blok topla, başa dön ve at
-- `!mc-mine [x] [y] [z]` - Koordinattaki bloğu kaz
+**GUI ile yapabilecekleriniz:**
+- Bot başlatma ve durdurma
+- Ayarları değiştirme
+- Ekonomi verilerini görüntüleme
+- Minecraft bot kontrolü
+- Canlı log izleme
+- Komut yönetimi
 
-### Özellikler:
-- ✅ AI ile sohbet (Groq)
-- ✅ Discord-Minecraft mesaj köprüsü
-- ✅ Otomatik küfür filtresi
-- ✅ Web panelden yönetim
-- ✅ Pathfinding (hareket)
+---
 
-## Komutlar
+## 🎮 Minecraft Entegrasyonu
 
-### 📌 Komut Türleri
-Bot hem **prefix komutları** (`!`) hem de **slash komutları** (`/`) destekler!
+Norm Bot, Minecraft sunucunuza bağlanıp Discord üzerinden kontrol edilebilen bir bot içerir.
 
-**Prefix Komutları:** `!yardım`, `!ekonomi`, `!avlan` vb.
-**Slash Komutları:** `/mesaj`, `/sunucu-bilgi`, `/ticket`, `/şablon` vb.
+**Komutlar:**
+```
+!mc-bağla [ip] [port] [kullanıcı]  - Sunucuya bağlan
+!mc-durum                           - Bot durumunu göster
+!mc-mesaj [mesaj]                   - Minecraft chate mesaj gönder
+!mc-collect [blok] [sayı]           - Blok topla ve getir
+!mc-mine [x] [y] [z]                - Belirtilen bloğu kaz
+!mc-hafıza                          - Botun hafızasını göster
+```
 
-### 🌍 Global Slash Komutlar
-Bu komutlar botun olmadığı sunucularda bile kullanılabilir:
-- `/mesaj [metin]` - Yazdığınız mesajı tekrarlar (her yerde çalışır!)
-- `/buton-mesaj [mesaj]` - Tıklanabilir butonlu mesaj gönderir (her yerde çalışır!)
+**Özellikler:**
+- Groq AI ile Minecraft'ta sohbet
+- Discord-Minecraft mesaj köprüsü
+- Otomatik pathfinding
+- Blok toplama ve madencilik
+- Oyuncu hafızası sistemi
+- 50+ bot yeteneği
+
+---
+
+## 📝 Komutlar
+
+Bot hem prefix (`!`) hem de slash (`/`) komutları destekler.
 
 ### 🤖 AI & Genel
 - `!yardım` - Tüm komutları gösterir
@@ -102,7 +163,7 @@ Bu komutlar botun olmadığı sunucularda bile kullanılabilir:
 - `@bot [mesaj]` - AI ile sohbet et
 - `!sunucu-bilgi` veya `/sunucu-bilgi` - Sunucu bilgilerini göster
 
-### 💰 Ekonomi Sistemi (OwO Benzeri)
+### 💰 Ekonomi Sistemi
 - `!ekonomi` - Ekonomi komutlarını göster
 - `!bakiye` - Bakiyeni ve istatistiklerini gör
 - `!günlük` - Günlük ödül topla (streak sistemi)
@@ -116,7 +177,7 @@ Bu komutlar botun olmadığı sunucularda bile kullanılabilir:
 - `!sat [hayvan] [miktar]` - Hayvan sat
 - `!sat hepsi` - Tüm hayvanları sat
 
-### 🎮 Kumar Oyunları (Animasyonlu)
+### 🎮 Kumar Oyunları
 - `!slot [miktar]` - Slot makinesi (10x jackpot!)
 - `!rulet [miktar] [kırmızı/siyah/yeşil]` - Rulet (yeşil 10x!)
 - `!coinflip [miktar] [yazı/tura]` - Yazı tura at
@@ -129,9 +190,6 @@ Bu komutlar botun olmadığı sunucularda bile kullanılabilir:
 ### 💰 Diğer Ekonomi
 - `!soygun @kullanıcı` - Başka kullanıcıyı soy
 
-### 🎵 Müzik
-- `!youtube [link]` - YouTube videosu çal (ses kanalında olmalısın)
-
 ### 🛡️ Moderasyon
 - `!mute @kullanıcı [süre]` - Kullanıcıyı sustur (örn: 10m, 1h)
 - `!unmute @kullanıcı` - Susturmayı kaldır
@@ -142,48 +200,40 @@ Bu komutlar botun olmadığı sunucularda bile kullanılabilir:
 
 ### 🎨 Sunucu Yönetimi
 - `!şablon [1/2]` - Sunucu şablonları (Oyun/Genel)
-  - 🎮 **1. Oyun Sunucusu:** Oyun topluluğu için özel kanallar, roller ve ticket sistemi
-  - 💬 **2. Genel Sunucu:** Sohbet, eğlence ve topluluk için genel amaçlı sunucu
 - `!ticket kur [#kanal]` - Ticket sistemini kur
-- `!ticket kapat` - Ticket kanalını kapat
-- `!ticket ekle @kullanıcı` - Ticket'a kullanıcı ekle
-- `!ticket çıkar @kullanıcı` - Ticket'tan kullanıcı çıkar
 - `!hoşgeldin ayarla [#kanal]` - Hoş geldin mesajı sistemini ayarla
-- `!hoşgeldin kapat` - Hoş geldin sistemini kapat
-- `!hoşgeldin test` - Hoş geldin mesajını test et
 - `!otorol ayarla @rol` - Yeni üyelere otomatik rol ver
-- `!otorol kapat` - Otomatik rol sistemini kapat
-- `!otorol durum` - Otomatik rol durumunu göster
 
-### 🎫 Ticket Sistemi
-Ticket sistemi ile kullanıcılar destek talebi oluşturabilir:
-1. `/ticket kur` komutu ile ticket panelini bir kanala gönderin
-2. Kullanıcılar "Ticket Aç" butonuna tıklayarak özel destek kanalı oluşturabilir
-3. Her kullanıcı için otomatik özel kanal oluşturulur
-4. Moderatörler `/ticket kapat` ile ticket'ı kapatabilir
+---
 
-### 🎨 Sunucu Şablonları
-Sunucunuzu hızlıca kurmak için hazır şablonlar:
+## 🤝 Katkıda Bulunma
 
-**🎮 Oyun Sunucusu Şablonu:**
-- 📢 Bilgilendirme (kurallar, duyurular, etkinlikler)
-- 💬 Sohbet (genel, oyun, bot komutları, medya)
-- 🎮 Oyun (takım bul, liderlik, ses kanalları)
-- 🎤 Sesli Kanallar (genel, müzik, AFK)
-- 🎫 Destek (ticket, SSS)
-- Roller: Yönetici, Moderatör, Oyuncu, VIP, Bot
+Katkılarınızı bekliyoruz! Lütfen pull request göndermeden önce:
 
-**💬 Genel Sunucu Şablonu:**
-- 📢 Bilgi (hoşgeldin, kurallar, duyurular)
-- 💬 Sohbet (genel, eğlence, bot, galeri, linkler)
-- 🎨 İçerik (sanat, müzik, video, öneriler)
-- 🎤 Sesli (genel, müzik, oyun, AFK)
-- 🎫 Destek (ticket, yardım)
-- Roller: Yönetici, Moderatör, Üye, İçerik Üreticisi, Bot
+1. Projeyi fork edin
+2. Yeni bir branch oluşturun (`git checkout -b feature/amazing-feature`)
+3. Değişikliklerinizi commit edin (`git commit -m 'feat: add amazing feature'`)
+4. Branch'inizi push edin (`git push origin feature/amazing-feature`)
+5. Pull Request oluşturun
 
-## Gereksinimler
+## 📄 Lisans
 
-- Node.js 18+
-- Discord.js v14
-- Groq API Key
-- Discord Bot Token
+Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
+
+## 🐛 Hata Bildirimi
+
+Bir hata mı buldunuz? [Issues](https://github.com/kursat3131/norm-bot/issues) sayfasından bize bildirin.
+
+## 📞 İletişim
+
+Sorularınız için [Issues](https://github.com/kursat3131/norm-bot/issues) sayfasını kullanabilirsiniz.
+
+---
+
+<div align="center">
+
+**Norm Bot** ile Discord sunucunuzu daha eğlenceli hale getirin!
+
+Beğendiyseniz ⭐ vermeyi unutmayın!
+
+</div>

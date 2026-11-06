@@ -2,7 +2,6 @@ import { Client, GatewayIntentBits, Collection, EmbedBuilder, ChannelType, Permi
 import Groq from 'groq-sdk';
 import config from './config.js';
 import { loadCommands } from './commands/index.js';
-import { startWebServer } from './web/server.js';
 import { handleGuildMemberAdd } from './commands/hosgeldin.js';
 import { handleAutoRole } from './commands/otorol.js';
 

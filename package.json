@@ -1,24 +1,33 @@
 {
-  "name": "norm-bot-site",
+  "name": "norm-bot",
   "version": "1.0.0",
-  "description": "Norm Bot - Discord AI Bot Website",
+  "description": "Discord AI Moderation and Minecraft Bot with Electron GUI",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "deploy": "node deploy-commands.js",
+    "gui": "electron gui/main.cjs"
   },
   "keywords": [
     "discord",
     "bot",
     "ai",
-    "website"
+    "groq",
+    "minecraft"
   ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "next": "^14.0.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.7",
+    "groq-sdk": "^0.15.0",
+    "minecraft-data": "^3.101.0",
+    "mineflayer": "^4.23.0",
+    "mineflayer-pathfinder": "^2.4.5"
+  },
+  "devDependencies": {
+    "electron": "^45.0.0"
   }
 }

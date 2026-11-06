@@ -1,11 +1,11 @@
-import { EmbedBuilder } from 'discord.js';
+﻿import { EmbedBuilder } from 'discord.js';
 import { getUser, updateUser } from '../economy/database.js';
 
 export default {
   name: 'coinflip',
   description: 'Yazı tura at',
   async execute(message, args) {
-    const user = getUser(message.author.id);
+    const username = message.author.username; const user = getUser(message.author.id, username);
     const bet = parseInt(args[0]);
     const choice = args[1]?.toLowerCase();
 

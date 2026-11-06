@@ -1,4 +1,4 @@
-import { EmbedBuilder } from 'discord.js';
+﻿import { EmbedBuilder } from 'discord.js';
 import { getUser, updateUser } from '../economy/database.js';
 
 const items = {
@@ -16,7 +16,7 @@ export default {
   name: 'mağaza',
   description: 'Mağazadan eşya al',
   async execute(message, args) {
-    const user = getUser(message.author.id);
+    const username = message.author.username; const user = getUser(message.author.id, username);
 
     // Mağazayı göster
     if (!args[0]) {

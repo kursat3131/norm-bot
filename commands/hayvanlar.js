@@ -6,7 +6,8 @@ export default {
   description: 'Hayvan koleksiyonunu gösterir',
   async execute(message, args) {
     const targetUser = message.mentions.users.first() || message.author;
-    const user = getUser(targetUser.id);
+    const username = targetUser.username;
+    const user = getUser(targetUser.id, username);
 
     if (Object.keys(user.animals).length === 0) {
       return message.reply('🦊 Henüz hiç hayvan yakalanmamış! `!avlan` komutuyla başla.');

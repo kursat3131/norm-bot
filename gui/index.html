@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Norm-Bot Kontrol Paneli</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ═══════ TITLEBAR ═══════ -->
+<div class="titlebar">
+  <div class="titlebar-brand">
+    <span data-icon="ai" data-icon-size="18" data-icon-color="#3b82f6"></span>
+    <span>NORM-BOT Kontrol Paneli</span>
+    <span style="color: var(--text-muted); font-size: 11px; margin-left: 4px;">v1.0</span>
+  </div>
+  <div style="font-size: 11px; color: var(--text-muted);" id="clock"></div>
+  <div class="titlebar-controls">
+    <button class="titlebar-btn" id="btn-minimize">
+      <span data-icon="minimize" data-icon-size="14"></span>
+    </button>
+    <button class="titlebar-btn" id="btn-maximize">
+      <span data-icon="maximize" data-icon-size="14"></span>
+    </button>
+    <button class="titlebar-btn close" id="btn-close">
+      <span data-icon="close" data-icon-size="14"></span>
+    </button>
+  </div>
+</div>
+
+<!-- ═══════ APP CONTAINER ═══════ -->
+<div class="app-container">
+
+  <!-- ─── SIDEBAR ─── -->
+  <nav class="sidebar">
+    <div class="nav-item active" data-page="dashboard" title="Gösterge Paneli">
+      <span data-icon="dashboard" data-icon-size="22" data-icon-color="#e2e8f0"></span>
+      <span class="nav-label">Panel</span>
+    </div>
+    <div class="nav-item" data-page="discord" title="Discord Bot">
+      <span data-icon="discord" data-icon-size="22" data-icon-color="#e2e8f0"></span>
+      <span class="nav-label">Discord</span>
+    </div>
+    <div class="nav-item" data-page="minecraft" title="Minecraft Bot">
+      <span data-icon="minecraft" data-icon-size="22" data-icon-color="#e2e8f0"></span>
+      <span class="nav-label">MC</span>
+    </div>
+    <div class="nav-item" data-page="economy" title="Ekonomi Sistemi">
+      <span data-icon="economy" data-icon-size="22" data-icon-color="#e2e8f0"></span>
+      <span class="nav-label">Ekonomi</span>
+    </div>
+    <div class="nav-item" data-page="commands" title="Komutlar">
+      <span data-icon="commands" data-icon-size="22" data-icon-color="#e2e8f0"></span>
+      <span class="nav-label">Komutlar</span>
+    </div>
+
+    <div class="nav-separator"></div>
+
+    <div class="nav-item" data-page="chat" title="Etkileşim / Chat">
+      <span data-icon="chat" data-icon-size="22" data-icon-color="#e2e8f0"></span>
+      <span class="nav-label">Chat</span>
+    </div>
+    <div class="nav-item" data-page="logs" title="Loglar">
+      <span data-icon="log" data-icon-size="22" data-icon-color="#e2e8f0"></span>
+      <span class="nav-label">Loglar</span>
+    </div>
+
+    <div class="sidebar-bottom">
+      <div class="nav-separator"></div>
+      <div class="nav-item" data-page="settings" title="Ayarlar">
+        <span data-icon="settings" data-icon-size="22" data-icon-color="#e2e8f0"></span>
+        <span class="nav-label">Ayarlar</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── MAIN CONTENT ─── -->
+  <main class="main-content">
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- PAGE: DASHBOARD                     -->
+    <!-- ═══════════════════════════════════ -->
+    <div class="page active" id="page-dashboard">
+      <div class="page-header">
+        <h1 class="page-title">
+          <span data-icon="dashboard" data-icon-size="28" data-icon-color="#3b82f6"></span>
+          Gösterge Paneli
+        </h1>
+        <p class="page-subtitle">Bot durumu ve hızlı işlemler</p>
+      </div>
+
+      <!-- Status Cards -->
+      <div class="status-bar">
+        <div class="status-card">
+          <div class="status-icon green">
+            <span data-icon="discord" data-icon-size="24" data-icon-color="#10b981"></span>
+          </div>
+          <div class="status-info">
+            <h3><span id="bot-status-dot" class="dot dot-red"></span> <span id="bot-status-text" style="color: var(--accent-red)">Durduruldu</span></h3>
+            <p>Discord Bot</p>
+          </div>
+        </div>
+        <div class="status-card">
+          <div class="status-icon blue">
+            <span data-icon="minecraft" data-icon-size="24" data-icon-color="#3b82f6"></span>
+          </div>
+          <div class="status-info">
+            <h3 id="mc-status-text" style="color: var(--text-muted)">Bağlı Değil</h3>
+            <p>Minecraft Bot</p>
+          </div>
+        </div>
+        <div class="status-card">
+          <div class="status-icon purple">
+            <span data-icon="ai" data-icon-size="24" data-icon-color="#8b5cf6"></span>
+          </div>
+          <div class="status-info">
+            <h3 id="ai-model-text" style="font-size: 14px;">-</h3>
+            <p>AI Model</p>
+          </div>
+        </div>
+        <div class="status-card">
+          <div class="status-icon yellow">
+            <span data-icon="commands" data-icon-size="24" data-icon-color="#f59e0b"></span>
+          </div>
+          <div class="status-info">
+            <h3 id="cmd-count-text">0</h3>
+            <p>Komut Sayısı</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">
+            <span data-icon="power" data-icon-size="18" data-icon-color="#3b82f6"></span>
+            Hızlı İşlemler
+          </span>
+        </div>
+        <div class="quick-actions">
+          <div class="quick-action" onclick="quickAction('start')">
+            <span data-icon="start" data-icon-size="28" data-icon-color="#10b981"></span>
+            <span>Bot Başlat</span>
+          </div>
+          <div class="quick-action" onclick="quickAction('stop')">
+            <span data-icon="stop" data-icon-size="28" data-icon-color="#ef4444"></span>
+            <span>Bot Durdur</span>
+          </div>
+          <div class="quick-action" onclick="quickAction('restart')">
+            <span data-icon="refresh" data-icon-size="28" data-icon-color="#f59e0b"></span>
+            <span>Yeniden Başlat</span>
+          </div>
+          <div class="quick-action" onclick="quickAction('deploy')">
+            <span data-icon="send" data-icon-size="28" data-icon-color="#8b5cf6"></span>
+            <span>Deploy</span>
+          </div>
+          <div class="quick-action" onclick="quickAction('folder')">
+            <span data-icon="memory" data-icon-size="28" data-icon-color="#10b981"></span>
+            <span>Proje Klasörü</span>
+          </div>
+          <div class="quick-action" onclick="quickAction('terminal')">
+            <span data-icon="commands" data-icon-size="28" data-icon-color="#f59e0b"></span>
+            <span>Terminal Aç</span>
+          </div>
+          <div class="quick-action" onclick="quickAction('reload-economy')">
+            <span data-icon="economy" data-icon-size="28" data-icon-color="#8b5cf6"></span>
+            <span>Ekonomi Yenile</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Terminal -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">
+            <span data-icon="log" data-icon-size="18" data-icon-color="#10b981"></span>
+            Konsol Çıktısı
+          </span>
+          <button class="btn btn-sm" onclick="clearLogs()">Temizle</button>
+        </div>
+        <div class="terminal" id="main-terminal"></div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- PAGE: DISCORD                       -->
+    <!-- ═══════════════════════════════════ -->
+    <div class="page" id="page-discord">
+      <div class="page-header">
+        <h1 class="page-title">
+          <span data-icon="discord" data-icon-size="28" data-icon-color="#3b82f6"></span>
+          Discord Bot Yönetimi
+        </h1>
+        <p class="page-subtitle">Bot kontrolü ve Discord etkileşimi</p>
+      </div>
+
+      <div class="grid-2">
+        <!-- Bot Control -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">
+              <span data-icon="power" data-icon-size="18" data-icon-color="#10b981"></span>
+              Bot Kontrolü
+            </span>
+            <span class="card-badge badge-offline" id="discord-badge">Çevrimdışı</span>
+          </div>
+          <div class="btn-group" style="margin-bottom: 16px;">
+            <button class="btn btn-success" id="btn-start">
+              <span data-icon="start" data-icon-size="16" data-icon-color="white"></span>
+              Başlat
+            </button>
+            <button class="btn btn-danger" id="btn-stop" disabled>
+              <span data-icon="stop" data-icon-size="16" data-icon-color="white"></span>
+              Durdur
+            </button>
+            <button class="btn" id="btn-restart">
+              <span data-icon="refresh" data-icon-size="16"></span>
+              Yeniden Başlat
+            </button>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-primary" id="btn-deploy">
+              <span data-icon="send" data-icon-size="16" data-icon-color="white"></span>
+              Slash Komutları Deploy
+            </button>
+          </div>
+        </div>
+
+        <!-- Bot Info -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">
+              <span data-icon="info" data-icon-size="18" data-icon-color="#3b82f6"></span>
+              Bot Bilgileri
+            </span>
+          </div>
+          <table class="data-table">
+            <tr><td style="color: var(--text-muted)">Prefix</td><td id="info-prefix">!</td></tr>
+            <tr><td style="color: var(--text-muted)">AI Model</td><td id="info-model">-</td></tr>
+            <tr><td style="color: var(--text-muted)">Client ID</td><td id="info-clientid" style="font-size: 11px;">-</td></tr>
+            <tr><td style="color: var(--text-muted)">Framework</td><td>discord.js v14</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Discord Log -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">
+            <span data-icon="log" data-icon-size="18" data-icon-color="#10b981"></span>
+            Discord Çıktısı
+          </span>
+        </div>
+        <div class="terminal" id="discord-log" style="min-height: 200px;"></div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- PAGE: MINECRAFT                     -->
+    <!-- ═══════════════════════════════════ -->
+    <div class="page" id="page-minecraft">
+      <div class="page-header">
+        <h1 class="page-title">
+          <span data-icon="minecraft" data-icon-size="28" data-icon-color="#10b981"></span>
+          Minecraft Bot
+        </h1>
+        <p class="page-subtitle">Minecraft botu yönetimi ve sohbet</p>
+      </div>
+
+      <div class="grid-2">
+        <!-- MC Status -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">
+              <span data-icon="health" data-icon-size="18" data-icon-color="#ef4444"></span>
+              Bot Durumu
+            </span>
+          </div>
+          <div class="gauge-container">
+            <span class="gauge-label">Sağlık</span>
+            <div class="gauge-bar"><div class="gauge-fill" id="mc-health-bar" style="width: 0%; background: var(--accent-green);"></div></div>
+            <span class="gauge-value" id="mc-health-val">--</span>
+          </div>
+          <div class="gauge-container">
+            <span class="gauge-label">Açlık</span>
+            <div class="gauge-bar"><div class="gauge-fill" id="mc-food-bar" style="width: 0%; background: var(--accent-yellow);"></div></div>
+            <span class="gauge-value" id="mc-food-val">--</span>
+          </div>
+          <div class="gauge-container">
+            <span class="gauge-label">Konum</span>
+            <div style="flex:1;">
+              <span id="mc-position" style="font-size: 12px; color: var(--text-secondary); font-family: monospace;">X: -- Y: -- Z: --</span>
+            </div>
+          </div>
+          <div style="margin-top: 12px;">
+            <button class="btn btn-sm btn-primary" onclick="refreshMCStatus()">
+              <span data-icon="refresh" data-icon-size="14" data-icon-color="white"></span>
+              Durumu Güncelle
+            </button>
+          </div>
+        </div>
+
+        <!-- MC Quick Commands -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">
+              <span data-icon="commands" data-icon-size="18" data-icon-color="#f59e0b"></span>
+              Hızlı Komutlar
+            </span>
+          </div>
+          <div class="quick-actions" style="grid-template-columns: repeat(2, 1fr);">
+            <div class="quick-action" onclick="mcQuickCmd('!mc-durum')">
+              <span data-icon="position" data-icon-size="24" data-icon-color="#3b82f6"></span>
+              <span>Durum</span>
+            </div>
+            <div class="quick-action" onclick="mcQuickCmd('!mc-hafiza')">
+              <span data-icon="memory" data-icon-size="24" data-icon-color="#8b5cf6"></span>
+              <span>Hafıza</span>
+            </div>
+            <div class="quick-action" onclick="mcQuickCmd('bağlantıyı kes')">
+              <span data-icon="stop" data-icon-size="24" data-icon-color="#ef4444"></span>
+              <span>Bağlantıyı Kes</span>
+            </div>
+            <div class="quick-action" onclick="mcQuickCmd('envanter')">
+              <span data-icon="economy" data-icon-size="24" data-icon-color="#10b981"></span>
+              <span>Envanter</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MC Chat -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">
+            <span data-icon="chat" data-icon-size="18" data-icon-color="#3b82f6"></span>
+            Minecraft Sohbet
+          </span>
+        </div>
+        <div class="chat-container">
+          <div class="chat-messages" id="mc-chat-messages">
+            <div class="chat-msg"><span class="author system">Sistem:</span> Minecraft sohbet arayüzü hazır. Bot bağlandığında mesajlar burada görünecek.</div>
+          </div>
+          <div class="chat-input-area">
+            <input type="text" id="mc-chat-input" placeholder="Minecraft'a mesaj gönder...">
+            <button id="btn-mc-send">Gönder</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- PAGE: ECONOMY                       -->
+    <!-- ═══════════════════════════════════ -->
+    <div class="page" id="page-economy">
+      <div class="page-header">
+        <h1 class="page-title">
+          <span data-icon="economy" data-icon-size="28" data-icon-color="#f59e0b"></span>
+          Ekonomi Sistemi
+        </h1>
+        <p class="page-subtitle">Kullanıcı bakiyeleri ve sıralama</p>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">
+            <span data-icon="users" data-icon-size="18" data-icon-color="#8b5cf6"></span>
+            Kullanıcılar
+          </span>
+          <button class="btn btn-sm" onclick="quickAction('reload-economy')">
+            <span data-icon="refresh" data-icon-size="14"></span>
+            Yenile
+          </button>
+        </div>
+        <div class="economy-grid" id="economy-users">
+          <p style="color: var(--text-muted)">Veri yükleniyor...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- PAGE: COMMANDS                      -->
+    <!-- ═══════════════════════════════════ -->
+    <div class="page" id="page-commands">
+      <div class="page-header">
+        <h1 class="page-title">
+          <span data-icon="commands" data-icon-size="28" data-icon-color="#8b5cf6"></span>
+          Komut Yönetimi
+        </h1>
+        <p class="page-subtitle">Kayıtlı tüm bot komutları</p>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Komutlar</span>
+          <div class="input-group" style="margin: 0; max-width: 250px;">
+            <input type="text" id="cmd-search" placeholder="Komut ara...">
+          </div>
+        </div>
+        <div class="command-list" id="command-list">
+          <p style="color: var(--text-muted)">Yükleniyor...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- PAGE: CHAT                          -->
+    <!-- ═══════════════════════════════════ -->
+    <div class="page" id="page-chat">
+      <div class="page-header">
+        <h1 class="page-title">
+          <span data-icon="chat" data-icon-size="28" data-icon-color="#10b981"></span>
+          Etkileşim Merkezi
+        </h1>
+        <p class="page-subtitle">Bot ile doğrudan etkileşim</p>
+      </div>
+
+      <div class="tabs">
+        <div class="tab active" data-tab="tab-bot-console">Bot Konsolu</div>
+        <div class="tab" data-tab="tab-mc-interact">Minecraft Etkileşimi</div>
+        <div class="tab" data-tab="tab-quick-cmd">Hızlı Komutlar</div>
+      </div>
+
+      <!-- Bot Console Tab -->
+      <div class="tab-content active" id="tab-bot-console">
+        <div class="card">
+          <div class="chat-container">
+            <div class="chat-messages" id="chat-messages">
+              <div class="chat-msg"><span class="author system">Sistem:</span> Konsol hazır. Bot çalışırken çıktılar burada görünecek.</div>
+            </div>
+            <div class="chat-input-area">
+              <input type="text" id="chat-input" placeholder="Komut veya mesaj gönder...">
+              <button id="btn-chat-send">Gönder</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MC Interact Tab -->
+      <div class="tab-content" id="tab-mc-interact">
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">
+              <span data-icon="minecraft" data-icon-size="18" data-icon-color="#10b981"></span>
+              Minecraft Bağlantı
+            </span>
+          </div>
+          <div class="input-group">
+            <input type="text" id="mc-host" placeholder="Sunucu IP (localhost)" value="localhost">
+            <input type="text" id="mc-port" placeholder="Port (25565)" value="25565" style="max-width: 100px;">
+            <input type="text" id="mc-username" placeholder="Bot adı" value="NormBot">
+            <button class="btn btn-success" onclick="connectMC()">Bağlan</button>
+          </div>
+          <div class="terminal" id="mc-connect-log" style="min-height: 100px; margin-top: 12px;"></div>
+        </div>
+      </div>
+
+      <!-- Quick Commands Tab -->
+      <div class="tab-content" id="tab-quick-cmd">
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Sık Kullanılan Discord Komutları</span>
+          </div>
+          <div class="quick-actions" style="grid-template-columns: repeat(4, 1fr);">
+            <div class="quick-action" onclick="sendQuickDiscord('!yardım')">
+              <span data-icon="info" data-icon-size="22" data-icon-color="#3b82f6"></span>
+              <span>!yardım</span>
+            </div>
+            <div class="quick-action" onclick="sendQuickDiscord('!ekonomi')">
+              <span data-icon="economy" data-icon-size="22" data-icon-color="#f59e0b"></span>
+              <span>!ekonomi</span>
+            </div>
+            <div class="quick-action" onclick="sendQuickDiscord('!bakiye')">
+              <span data-icon="economy" data-icon-size="22" data-icon-color="#10b981"></span>
+              <span>!bakiye</span>
+            </div>
+            <div class="quick-action" onclick="sendQuickDiscord('!lider')">
+              <span data-icon="users" data-icon-size="22" data-icon-color="#8b5cf6"></span>
+              <span>!lider</span>
+            </div>
+            <div class="quick-action" onclick="sendQuickDiscord('!avlan')">
+              <span data-icon="health" data-icon-size="22" data-icon-color="#ef4444"></span>
+              <span>!avlan</span>
+            </div>
+            <div class="quick-action" onclick="sendQuickDiscord('!slot')">
+              <span data-icon="dashboard" data-icon-size="22" data-icon-color="#f59e0b"></span>
+              <span>!slot</span>
+            </div>
+            <div class="quick-action" onclick="sendQuickDiscord('!mc-durum')">
+              <span data-icon="minecraft" data-icon-size="22" data-icon-color="#10b981"></span>
+              <span>!mc-durum</span>
+            </div>
+            <div class="quick-action" onclick="sendQuickDiscord('!ai')">
+              <span data-icon="ai" data-icon-size="22" data-icon-color="#3b82f6"></span>
+              <span>!ai</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- PAGE: LOGS                          -->
+    <!-- ═══════════════════════════════════ -->
+    <div class="page" id="page-logs">
+      <div class="page-header">
+        <h1 class="page-title">
+          <span data-icon="log" data-icon-size="28" data-icon-color="#10b981"></span>
+          Log Kayıtları
+        </h1>
+        <p class="page-subtitle">Tüm sistem logları</p>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Tam Konsol Çıktısı</span>
+          <div class="btn-group">
+            <button class="btn btn-sm" id="btn-clear-logs">Temizle</button>
+            <button class="btn btn-sm" onclick="exportLogs()">Dışa Aktar</button>
+          </div>
+        </div>
+        <div class="terminal" id="full-log-terminal" style="max-height: 600px;"></div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- PAGE: SETTINGS                      -->
+    <!-- ═══════════════════════════════════ -->
+    <div class="page" id="page-settings">
+      <div class="page-header">
+        <h1 class="page-title">
+          <span data-icon="settings" data-icon-size="28" data-icon-color="#8b5cf6"></span>
+          Ayarlar
+        </h1>
+        <p class="page-subtitle">.env yapılandırması ve bot ayarları</p>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">
+            <span data-icon="settings" data-icon-size="18" data-icon-color="#8b5cf6"></span>
+            Bot Yapılandırması
+          </span>
+        </div>
+        
+        <div class="setting-row">
+          <div class="setting-info">
+            <h4>Discord Token</h4>
+            <p>Bot token (Discord Developer Portal'dan)</p>
+          </div>
+          <input type="password" id="cfg-token" style="width: 350px; padding: 8px 12px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-primary); font-size: 13px;">
+        </div>
+
+        <div class="setting-row">
+          <div class="setting-info">
+            <h4>Client ID</h4>
+            <p>Discord uygulama ID'si</p>
+          </div>
+          <input type="text" id="cfg-clientid" style="width: 250px; padding: 8px 12px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-primary); font-size: 13px;">
+        </div>
+
+        <div class="setting-row">
+          <div class="setting-info">
+            <h4>Groq API Key</h4>
+            <p>AI sohbet için Groq API anahtarı</p>
+          </div>
+          <input type="password" id="cfg-groq" style="width: 350px; padding: 8px 12px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-primary); font-size: 13px;">
+        </div>
+
+        <div class="setting-row">
+          <div class="setting-info">
+            <h4>Komut Prefix</h4>
+            <p>Bot komut ön eki</p>
+          </div>
+          <input type="text" id="cfg-prefix" style="width: 80px; padding: 8px 12px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-primary); font-size: 13px; text-align: center;">
+        </div>
+
+        <div class="setting-row">
+          <div class="setting-info">
+            <h4>AI Model</h4>
+            <p>Kullanılacak AI modeli</p>
+          </div>
+          <select id="cfg-model" style="width: 280px; padding: 8px 12px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-primary); font-size: 13px;">
+            <option value="llama-3.3-70b-versatile">Llama 3.3 70B (Varsayılan)</option>
+            <option value="llama-3.1-8b-instant">Llama 3.1 8B (Hızlı)</option>
+            <option value="qwen/qwen3.8-27b">Qwen 3.8 27B</option>
+            <option value="mixtral-8x7b-32768">Mixtral 8x7B</option>
+            <option value="gemma2-9b-it">Gemma 2 9B</option>
+          </select>
+        </div>
+
+        <div style="margin-top: 20px; display: flex; gap: 12px;">
+          <button class="btn btn-primary" id="btn-save-config">
+            <span data-icon="send" data-icon-size="16" data-icon-color="white"></span>
+            Kaydet
+          </button>
+          <button class="btn" id="btn-open-folder">
+            <span data-icon="memory" data-icon-size="16"></span>
+            Proje Klasörü
+          </button>
+        </div>
+      </div>
+
+      <!-- Bot Profil Yönetimi (İsim & Avatar) -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">
+            <span data-icon="users" data-icon-size="18" data-icon-color="#10b981"></span>
+            Bot Profil Yönetimi (İsim & Avatar)
+          </span>
+        </div>
+        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 14px;">
+          Discord API üzerinden botun görünen kullanıcı adını ve avatarını güncelleyin.
+        </p>
+
+        <div class="setting-row">
+          <div class="setting-info">
+            <h4>Bot Kullanıcı Adı</h4>
+            <p>Yeni kullanıcı adı</p>
+          </div>
+          <div style="display: flex; gap: 8px; width: 350px;">
+            <input type="text" id="bot-new-name" placeholder="Yeni bot ismi" style="flex: 1; padding: 8px 12px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-primary); font-size: 13px;">
+            <button class="btn btn-primary btn-sm" id="btn-update-name">Uygula</button>
+          </div>
+        </div>
+
+        <div class="setting-row">
+          <div class="setting-info">
+            <h4>Bot Avatarı</h4>
+            <p>Resim URL'si veya yerel dosya seçin</p>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px; width: 350px;">
+            <div style="display: flex; gap: 8px;">
+              <input type="text" id="bot-avatar-url" placeholder="https://... resim URL veya dosya yolu" style="flex: 1; padding: 8px 12px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-primary); font-size: 13px;">
+              <button class="btn btn-primary btn-sm" id="btn-update-avatar">Uygula</button>
+            </div>
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <input type="file" id="bot-avatar-file" accept="image/*" style="display: none;">
+              <button class="btn btn-sm" onclick="document.getElementById('bot-avatar-file').click()">Dosya Seç...</button>
+              <span id="bot-avatar-filename" style="font-size: 11px; color: var(--text-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- Toast -->
+<div id="toast" style="display:none; position:fixed; bottom:24px; right:24px; background:#10b981; color:white; padding:10px 20px; border-radius:8px; font-size:13px; z-index:9999; transition: opacity 0.3s;"></div>
+
+<script src="js/math-icons.cjs"></script>
+<script src="js/renderer.cjs"></script>
+<script>
+  // Init dynamic values
+  document.addEventListener('DOMContentLoaded', () => {
+    // AI Model display
+    const modelEl = document.getElementById('ai-model-text');
+    const infoModel = document.getElementById('info-model');
+    const infoPrefix = document.getElementById('info-prefix');
+    const infoClient = document.getElementById('info-clientid');
+    const cmdCount = document.getElementById('cmd-count-text');
+    
+    setTimeout(() => {
+      if (modelEl) modelEl.textContent = state.config.AI_MODEL || '-';
+      if (infoModel) infoModel.textContent = state.config.AI_MODEL || '-';
+      if (infoPrefix) infoPrefix.textContent = state.config.PREFIX || '!';
+      if (infoClient) infoClient.textContent = state.config.CLIENT_ID || '-';
+      if (cmdCount) cmdCount.textContent = state.commands.length;
+    }, 100);
+  });
+  
+  // MC Quick Commands - artık renderer.cjs'de tanımlı
+  
+  function connectMC() {
+    const host = document.getElementById('mc-host')?.value || 'localhost';
+    const port = document.getElementById('mc-port')?.value || '25565';
+    const username = document.getElementById('mc-username')?.value || 'NormBot';
+    addLog('info', `MC bağlantısı: ${host}:${port} (${username})`);
+    // Bot stdin üzerinden komut gönder
+    if (state.botProcess && state.botProcess.stdin) {
+      state.botProcess.stdin.write(`!mc-bağla ${host} ${port} ${username}\n`);
+    } else {
+      addLog('warn', 'Önce Discord botu başlatın');
+    }
+  }
+
+      .then(data => {
+        if (data.connected) {
+          const hpPct = (data.health / 20 * 100);
+          const foodPct = (data.food / 20 * 100);
+          document.getElementById('mc-health-bar').style.width = hpPct + '%';
+          document.getElementById('mc-health-val').textContent = Math.round(data.health);
+          document.getElementById('mc-food-bar').style.width = foodPct + '%';
+          document.getElementById('mc-food-val').textContent = Math.round(data.food);
+          if (data.position) {
+            document.getElementById('mc-position').textContent = 
+              `X: ${Math.round(data.position.x)} Y: ${Math.round(data.position.y)} Z: ${Math.round(data.position.z)}`;
+          }
+          document.getElementById('mc-status-text').textContent = `Bağlı (${data.username})`;
+          document.getElementById('mc-status-text').style.color = 'var(--accent-green)';
+        }
+      })
+      .catch(() => {
+        addLog('warn', 'MC durum alınamadı');
+      });
+  }
+  
+  function sendQuickDiscord(cmd) {
+    addLog('info', `Discord komutu gönderildi: ${cmd}`);
+    if (state.botProcess && state.botProcess.stdin) {
+      state.botProcess.stdin.write(cmd + '\n');
+    }
+  }
+  
+  function exportLogs() {
+    const content = state.logs.map(l => `[${l.time}] [${l.type.toUpperCase()}] ${l.message}`).join('\n');
+    const fs = require('fs');
+    const logPath = require('path').join(require('path').resolve(__dirname, '..'), `logs-${Date.now()}.txt`);
+    fs.writeFileSync(logPath, content);
+    addLog('success', `Loglar dışa aktarıldı: ${logPath}`);
+    showToast('Loglar kaydedildi');
+  }
+</script>
+
+</body>
+</html>

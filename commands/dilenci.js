@@ -1,10 +1,10 @@
-import { getUser, addMoney } from '../economy/database.js';
+﻿import { getUser, addMoney } from '../economy/database.js';
 
 export default {
   name: 'dilenci',
   description: 'Dilencilik yaparak para kazan',
   async execute(message) {
-    const user = getUser(message.author.id);
+    const username = message.author.username; const user = getUser(message.author.id, username);
     const now = Date.now();
     const cooldown = 60000; // 1 dakika
 

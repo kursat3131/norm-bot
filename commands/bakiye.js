@@ -5,7 +5,8 @@ export default {
   name: 'bakiye',
   description: 'Para bakiyeni gösterir',
   async execute(message) {
-    const user = getUser(message.author.id);
+    const username = message.author.username;
+    const user = getUser(message.author.id, username);
     
     const embed = new EmbedBuilder()
       .setColor('#FFD700')

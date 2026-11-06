@@ -67,6 +67,11 @@ export function getPlayerMemory(username) {
   return memory.players[username] || null;
 }
 
+// Tüm oyuncuları al
+export function getAllPlayers() {
+  return memory.players;
+}
+
 // Konum kaydet
 export function rememberLocation(name, position, description) {
   memory.locations[name] = {

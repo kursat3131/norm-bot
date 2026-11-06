@@ -50,9 +50,9 @@ Bot yazdığınız mesajı tekrarlar.
 
 ## 🔗 Bot Davet Linki
 
-Botunuzu davet etmek için bu linki kullanın:
+Botunuzu davet etmek için bu linki kullanın (YOUR_CLIENT_ID yerine kendi Client ID'nizi yazın):
 ```
-https://discord.com/api/oauth2/authorize?client_id=1363822408544292985&permissions=8&scope=bot%20applications.commands
+https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=8&scope=bot%20applications.commands
 ```
 
 **Önemli:** `applications.commands` scope'u slash komutlar için gereklidir!

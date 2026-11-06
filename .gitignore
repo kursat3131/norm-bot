@@ -1,3 +1,6 @@
 node_modules/
 .env
 *.log
+welcome-config.json
+economy/users.json
+minecraft/memory.json

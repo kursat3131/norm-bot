@@ -18,13 +18,9 @@ export default {
     let description = '';
     for (let i = 0; i < sorted.length; i++) {
       const [userId, userData] = sorted[i];
-      try {
-        const user = await message.client.users.fetch(userId);
-        const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `${i + 1}.`;
-        description += `${medal} **${user.username}** - ${userData.money.toLocaleString()} coin\n`;
-      } catch (error) {
-        // Kullanıcı bulunamazsa atla
-      }
+      const username = userData.username || 'Bilinmeyen Kullanıcı';
+      const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `${i + 1}.`;
+      description += `${medal} **${username}** - ${userData.money.toLocaleString()} coin\n`;
     }
 
     const embed = new EmbedBuilder()

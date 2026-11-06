@@ -75,8 +75,8 @@ Discord'un tüm sunucularına yayılması zaman alır.
 - Tekrar deneyin
 
 **3. Doğru Client ID?**
-- `.env` dosyasında `CLIENT_ID=1363822408544292985`
-- Doğru mu kontrol edin
+- `.env` dosyasında `CLIENT_ID` değerini kontrol edin
+- Discord Developer Portal'dan alınan değer doğru mu kontrol edin
 
 **4. Deploy Çalıştırdınız mı?**
 ```bash

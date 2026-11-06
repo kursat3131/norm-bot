@@ -1,11 +1,11 @@
-import { EmbedBuilder } from 'discord.js';
+﻿import { EmbedBuilder } from 'discord.js';
 import { getUser } from '../economy/database.js';
 
 export default {
   name: 'envanter',
   description: 'Envanterini gösterir',
   async execute(message) {
-    const user = getUser(message.author.id);
+    const username = message.author.username; const user = getUser(message.author.id, username);
 
     if (!user.inventory || Object.keys(user.inventory).length === 0) {
       return message.reply('📦 Envanterinde hiç eşya yok! `!mağaza` ile eşya satın alabilirsin.');

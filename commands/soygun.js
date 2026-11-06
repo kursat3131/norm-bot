@@ -1,11 +1,11 @@
-import { EmbedBuilder } from 'discord.js';
+﻿import { EmbedBuilder } from 'discord.js';
 import { getUser, updateUser } from '../economy/database.js';
 
 export default {
   name: 'soygun',
   description: 'Başka bir kullanıcıyı soy',
   async execute(message) {
-    const user = getUser(message.author.id);
+    const username = message.author.username; const user = getUser(message.author.id, username);
     const now = Date.now();
     const cooldown = 7200000; // 2 saat
 
@@ -27,7 +27,8 @@ export default {
       return message.reply('❌ Botları soyamazsın!');
     }
 
-    const targetUser = getUser(target.id);
+    const targetUsername = target.username;
+    const targetUser = getUser(target.id, targetUsername);
 
     if (targetUser.money < 100) {
       return message.reply('❌ Bu kullanıcının yeterli parası yok!');

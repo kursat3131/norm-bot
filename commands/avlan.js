@@ -6,7 +6,8 @@ export default {
   name: 'avlan',
   description: 'Hayvan avla ve para kazan',
   async execute(message) {
-    const user = getUser(message.author.id);
+    const username = message.author.username;
+    const user = getUser(message.author.id, username);
     const now = Date.now();
     const cooldown = 15000; // 15 saniye
 

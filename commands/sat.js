@@ -1,4 +1,4 @@
-import { EmbedBuilder } from 'discord.js';
+﻿import { EmbedBuilder } from 'discord.js';
 import { getUser, updateUser } from '../economy/database.js';
 import { animals } from '../economy/animals.js';
 
@@ -6,7 +6,7 @@ export default {
   name: 'sat',
   description: 'Hayvanlarını sat',
   async execute(message, args) {
-    const user = getUser(message.author.id);
+    const username = message.author.username; const user = getUser(message.author.id, username);
 
     if (!args[0]) {
       return message.reply('❌ Kullanım: `!sat [hayvan-emoji] [miktar]` veya `!sat hepsi`');

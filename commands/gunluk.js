@@ -5,7 +5,8 @@ export default {
   name: 'günlük',
   description: 'Günlük ödülünü topla',
   async execute(message) {
-    const user = getUser(message.author.id);
+    const username = message.author.username;
+    const user = getUser(message.author.id, username);
     const now = Date.now();
     const oneDay = 86400000;
 

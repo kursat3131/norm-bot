@@ -26,7 +26,7 @@ export function createMinecraftBot(options) {
     host: options.host || 'localhost',
     port: options.port || 25565,
     username: options.username || 'DiscordBot',
-    version: options.version || '1.20.4', // Belirli bir versiyon kullan
+    version: options.version || false, // Belirtilmezse otomatik algılanır
     auth: 'offline',
     hideErrors: false // Hataları göster
   });
@@ -257,19 +257,32 @@ SADECE JSON yanıt ver, başka açıklama ekleme!`
       ],
       model: config.aiModel,
       temperature: 0.7,
-      max_tokens: 200
+      max_tokens: 600,
+      response_format: { type: 'json_object' }
     });
 
-    const aiResponse = completion.choices[0]?.message?.content || '{"response": "Anlamadım!"}';
-    
-    // JSON parse et
-    const jsonMatch = aiResponse.match(/\{[\s\S]*\}/);
-    if (!jsonMatch) {
+    const choice = completion.choices[0];
+    const aiResponse = choice?.message?.content?.trim();
+
+    if (!aiResponse) {
+      console.warn(`[AI] Boş yanıt | finish: ${choice?.finish_reason}`);
       return { response: 'Anlamadım!' };
     }
 
-    const result = JSON.parse(jsonMatch[0]);
-    return result;
+    // JSON parse et (kod bloğu işaretlerini temizle)
+    const cleaned = aiResponse.replace(/```(?:json)?/gi, '').trim();
+    const jsonMatch = cleaned.match(/\{[\s\S]*\}/);
+    if (!jsonMatch) {
+      console.warn(`[AI] JSON bulunamadı | finish: ${choice?.finish_reason} | ${aiResponse.slice(0, 200)}`);
+      return { response: aiResponse.slice(0, 200) };
+    }
+
+    try {
+      return JSON.parse(jsonMatch[0]);
+    } catch (error) {
+      console.warn(`[AI] JSON parse hatası | ${aiResponse.slice(0, 200)}`);
+      return { response: cleaned.slice(0, 200) };
+    }
 
   } catch (error) {
     console.error('AI hatası:', error);

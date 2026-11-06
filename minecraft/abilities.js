@@ -1,4 +1,5 @@
 import pathfinderPlugin from 'mineflayer-pathfinder';
+import minecraftData from 'minecraft-data';
 import * as memory from './memory.js';
 
 const { goals } = pathfinderPlugin;
@@ -375,7 +376,7 @@ export class BotAbilities {
   // Crafting - Eşya yap
   async craftItem(itemName, count = 1) {
     try {
-      const mcData = require('minecraft-data')(this.bot.version);
+      const mcData = minecraftData(this.bot.version);
       const item = mcData.itemsByName[itemName];
       
       if (!item) {

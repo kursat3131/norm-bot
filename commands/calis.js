@@ -1,4 +1,4 @@
-import { EmbedBuilder } from 'discord.js';
+﻿import { EmbedBuilder } from 'discord.js';
 import { getUser, updateUser } from '../economy/database.js';
 
 const jobs = [
@@ -16,7 +16,7 @@ export default {
   name: 'çalış',
   description: 'Çalışarak para kazan',
   async execute(message) {
-    const user = getUser(message.author.id);
+    const username = message.author.username; const user = getUser(message.author.id, username);
     const now = Date.now();
     const cooldown = 3600000; // 1 saat
 

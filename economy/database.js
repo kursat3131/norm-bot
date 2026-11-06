@@ -24,7 +24,7 @@ function saveDB(data) {
 }
 
 // Kullanıcı verisi al
-export function getUser(userId) {
+export function getUser(userId, username = null) {
   const db = loadDB();
   if (!db[userId]) {
     db[userId] = {
@@ -34,8 +34,17 @@ export function getUser(userId) {
       daily: 0,
       streak: 0,
       lastHunt: 0,
-      lastBattle: 0
+      lastBattle: 0,
+      username: username || `User_${userId.slice(0, 8)}`
     };
+    saveDB(db);
+  } else if (username && db[userId].username !== username) {
+    // Username değiştiyse güncelle
+    db[userId].username = username;
+    saveDB(db);
+  } else if (!db[userId].username) {
+    // Eski kullanıcılarda username yoksa ekle
+    db[userId].username = username || `User_${userId.slice(0, 8)}`;
     saveDB(db);
   }
   return db[userId];

@@ -1,4 +1,4 @@
-import { EmbedBuilder } from 'discord.js';
+﻿import { EmbedBuilder } from 'discord.js';
 import { getUser, updateUser } from '../economy/database.js';
 
 const fish = [
@@ -13,7 +13,7 @@ export default {
   name: 'balık-tut',
   description: 'Balık tut ve sat',
   async execute(message) {
-    const user = getUser(message.author.id);
+    const username = message.author.username; const user = getUser(message.author.id, username);
 
     if (!user.inventory || !user.inventory['🎣']) {
       return message.reply('❌ Balık tutmak için olta gerekli! `!mağaza` dan satın alabilirsin.');
